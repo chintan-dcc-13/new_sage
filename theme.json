@@ -1,0 +1,201 @@
+{
+  "__generated__": "⚠️ This file is generated. Do not edit.",
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "background": {
+      "backgroundImage": true
+    },
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "duotone": [],
+      "palette": [
+        {
+          "color": "transparent",
+          "name": "Transparent",
+          "slug": "transparent"
+        },
+        {
+          "color": "#ffffff",
+          "name": "White",
+          "slug": "white"
+        },
+        {
+          "color": "#000000",
+          "name": "Black",
+          "slug": "black"
+        },
+        {
+          "color": "#004b80",
+          "name": "DarkBlue",
+          "slug": "darkblue"
+        },
+        {
+          "color": "#059bd8",
+          "name": "Blue 100",
+          "slug": "blue-100"
+        },
+        {
+          "color": "#004b80",
+          "name": "Blue 200",
+          "slug": "blue-200"
+        },
+        {
+          "color": "#08435b",
+          "name": "Blue 300",
+          "slug": "blue-300"
+        },
+        {
+          "color": "#15a02b",
+          "name": "Green",
+          "slug": "green"
+        },
+        {
+          "color": "#fafafa",
+          "name": "Gray 100",
+          "slug": "gray-100"
+        },
+        {
+          "color": "#455a64",
+          "name": "Gray 200",
+          "slug": "gray-200"
+        },
+        {
+          "color": "#137894",
+          "name": "Aquamarine",
+          "slug": "aquamarine"
+        }
+      ]
+    },
+    "custom": {
+      "spacing": {},
+      "typography": {
+        "font-size": {},
+        "line-height": {}
+      }
+    },
+    "spacing": {
+      "padding": true,
+      "units": [
+        "px",
+        "%",
+        "em",
+        "rem",
+        "vw",
+        "vh"
+      ]
+    },
+    "typography": {
+      "customFontSize": false,
+      "fontFamilies": [
+        {
+          "fontFamily": "Outfit",
+          "name": "Outfit",
+          "slug": "Outfit"
+        },
+        {
+          "fontFamily": "Redwing",
+          "name": "Redwing",
+          "slug": "Redwing"
+        }
+      ],
+      "fontSizes": [
+        {
+          "name": "12",
+          "size": "12px",
+          "slug": "12"
+        },
+        {
+          "name": "13",
+          "size": "13px",
+          "slug": "13"
+        },
+        {
+          "name": "14",
+          "size": "14px",
+          "slug": "14"
+        },
+        {
+          "name": "16",
+          "size": "16px",
+          "slug": "16"
+        },
+        {
+          "name": "17",
+          "size": "17px",
+          "slug": "17"
+        },
+        {
+          "name": "18",
+          "size": "18px",
+          "slug": "18"
+        },
+        {
+          "name": "20",
+          "size": "20px",
+          "slug": "20"
+        },
+        {
+          "name": "22",
+          "size": "22px",
+          "slug": "22"
+        },
+        {
+          "name": "24",
+          "size": "24px",
+          "slug": "24"
+        },
+        {
+          "name": "26",
+          "size": "26px",
+          "slug": "26"
+        },
+        {
+          "name": "28",
+          "size": "28px",
+          "slug": "28"
+        },
+        {
+          "name": "30",
+          "size": "30px",
+          "slug": "30"
+        },
+        {
+          "name": "32",
+          "size": "32px",
+          "slug": "32"
+        },
+        {
+          "name": "34",
+          "size": "34px",
+          "slug": "34"
+        },
+        {
+          "name": "40",
+          "size": "40px",
+          "slug": "40"
+        },
+        {
+          "name": "48",
+          "size": "48px",
+          "slug": "48"
+        },
+        {
+          "name": "56",
+          "size": "56px",
+          "slug": "56"
+        },
+        {
+          "name": "64",
+          "size": "64px",
+          "slug": "64"
+        }
+      ]
+    }
+  }
+}

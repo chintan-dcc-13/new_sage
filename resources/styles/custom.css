@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@font-face {
+    font-family: 'Redwing';
+    src: url('../fonts/Redwing-Medium.otf') format('opentype');
+    font-weight: Medium;
+    font-display: swap;
+}
+
+
+/*-----------------------------------------Banner-section---------------------------------------------------------------*/
+
+section.Home-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.content-wrap {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 90px 1.5rem !important;
+    grid-gap: 24px;
+}
+h2.sub-title {
+    color: #FFF;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+a.banner-button {
+    display: flex;
+    width: 175px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: auto;
+    border-radius: 3px;
+    background: var(--green-primary, #15A02B);
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+h2.content-title {
+    color: #004B80;
+    font-family: Redwing;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    padding-bottom: 16px;
+}
+.content-text {
+    color: #455A64;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-bottom: 24px;
+}
+section.image_content_loop .button {
+    border-radius: 3px;
+    background: #15A02B;
+    padding: 10px 20px;
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+/*-----------------------------------------Banner-section---------------------------------------------------------------*/
