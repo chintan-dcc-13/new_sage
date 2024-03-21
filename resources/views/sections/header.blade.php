@@ -1,15 +1,20 @@
-<header class="banner">
-  <a class="brand" href="{{ home_url('/') }}">
-    {!! $siteName !!}
+<hedaer class="header header-transperent">
+<div class="container-fluid !px-0">
+  <div class="header-bottom flex flex-wrap justify-between xl:items-stretch xlscreen:items-center w-full relative xl:px-80 lg:px-40 px-30 py-16 lg:pb-16 lg:pt-0">
+  <div class="logo xl:flex xl:justify-center">
+  <a class="brand" href="{{ home_url('/') }}">                
+    <img src="{{ $header_logo }}">
   </a>
-
-  @if (has_nav_menu('primary_navigation'))
-    <nav class="nav-primary" aria-label="{{ wp_get_nav_menu_name('primary_navigation') }}">
-      {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'echo' => false]) !!}
-    </nav>
-  @endif
-</header>
-
-<hedaer>
-  
+  </div>
+  <div class="navbar">
+  {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav', 'echo' => false]) !!}
+  </div>
+  <div class="btn-custom lgscreen:hidden">
+  <ul>
+    <li><a href="" class="btn btn-h-green">Dealer Resources</a></li>
+    <li><a href="" class="btn btn-h-green">Request A Quote</a></li>
+  </ul>
+  </div>
+  </div>
+</div>
 </hedaer>

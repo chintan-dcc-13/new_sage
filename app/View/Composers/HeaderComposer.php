@@ -12,9 +12,9 @@ class HeaderComposer extends Composer
      * @var string[]
      */
     protected static $views = [
-        'section.header'
+        'sections.header',
     ];
-    public function width(){
+    public function with(){
         return[
 
             //Header
