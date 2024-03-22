@@ -9,6 +9,13 @@ domReady(async () => {
   // ...
 
   jQuery(document).ready(function ($) {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() >= 300) {
+        $('.header').addClass('is-sticky');
+      } else {
+        $('.header').removeClass('is-sticky');
+      }
+    });
     if ($('.advantages').length) {
       var advantagesslide;
       function initSwiper() {
@@ -156,6 +163,37 @@ domReady(async () => {
         },
       });
     }
+      var galleryslide = new Swiper('.announcement-bar', {
+        loop: true,
+        slidesPerView: '1',
+        spaceBetween: 0,
+        centeredSlides: false,
+        speed: 3000,
+        freeMode: true,
+        autoplay: {
+          delay: 0,
+        },
+        disableOnInteraction: false,
+        breakpoints: {
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+          640: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 40,
+          },
+        },
+      });
+    
   });
 });
 

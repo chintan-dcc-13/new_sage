@@ -13,6 +13,7 @@ class HeaderComposer extends Composer
      */
     protected static $views = [
         'sections.header',
+        'sections.footer',
     ];
     public function with(){
         return[
@@ -27,6 +28,10 @@ class HeaderComposer extends Composer
             'message_slider' => get_field('message_slider','option'),
             'phone_number' => get_field('phone_number','option'),
             'email' => get_field('email','option'),
+
+            //Footer
+            'footer_logo' => get_field('footer_logo', 'option'),
+            
         ];
     }
 }
