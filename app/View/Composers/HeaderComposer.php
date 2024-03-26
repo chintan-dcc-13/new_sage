@@ -31,7 +31,7 @@ class HeaderComposer extends Composer
 
             //Footer
             'footer_logo' => get_field('footer_logo', 'option'),
-            
+            'social_media_item' => get_field('social_media_item', 'option'),
         ];
     }
 }
