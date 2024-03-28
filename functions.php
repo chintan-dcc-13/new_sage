@@ -63,3 +63,23 @@ collect(['setup', 'filters'])
             );
         }
     });
+
+
+// Add code into the head tag
+function add_code_to_head() {
+    $post_id = get_the_ID();
+    $href_lang = get_field('hreflang_tags', $post_id);
+    foreach($href_lang as $content){
+        ?>
+        <link rel="alternate" href="<?php echo $content['alternative_url'] ?>" hreflang="<?php if( $content['language'] != 'x-default' ){
+                    echo $content['language'] .'-'. $content['region'];
+        }
+        else{
+            echo 'x-default';
+        }?>">
+        <?php
+    }
+}
+add_action('wp_head', 'add_code_to_head');
+
+
