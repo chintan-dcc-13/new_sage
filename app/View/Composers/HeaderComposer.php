@@ -31,7 +31,11 @@ class HeaderComposer extends Composer
 
             //Footer
             'footer_logo' => get_field('footer_logo', 'option'),
+            'news_letter_title' => get_field('news_letter_title', 'option'),
+            'news_letter_description' => get_field('news_letter_description', 'option'),
+            'form_shortcode' => get_field('form_shortcode', 'option'),
             'social_media_item' => get_field('social_media_item', 'option'),
+            'copy_right' => get_field('copy_right', 'option'),
         ];
     }
 }

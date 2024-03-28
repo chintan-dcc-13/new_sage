@@ -44,21 +44,39 @@
   </div>
   <div class="container-fluid !px-0">
     <div class="header-bottom flex flex-wrap justify-between xl:items-stretch xlscreen:items-center w-full relative xl:px-80 lg:px-40 px-30 py-16 lg:pb-16 lg:pt-0">
+      <a href="tel:{{ $phone_number }}" class="btn btn-link-ico lg:hidden"> <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M28.8407 35.9997C27.2721 35.9997 25.0687 35.4324 21.7692 33.5889C17.7569 31.3389 14.6534 29.2617 10.6629 25.2815C6.81532 21.4364 4.94297 18.9469 2.32249 14.1784C-0.637899 8.79445 -0.13325 5.97227 0.430864 4.7661C1.10266 3.32447 2.09428 2.46223 3.37599 1.60642C4.10399 1.12944 4.8744 0.720563 5.67745 0.384973C5.7578 0.350419 5.83254 0.317473 5.89923 0.28774C6.29701 0.108541 6.89969 -0.162265 7.66309 0.127024C8.17257 0.318276 8.62739 0.70962 9.33937 1.41275C10.7995 2.85277 12.7948 6.05986 13.5308 7.63488C14.025 8.69641 14.3521 9.39713 14.3529 10.183C14.3529 11.1031 13.89 11.8127 13.3283 12.5785C13.2231 12.7224 13.1186 12.8598 13.0174 12.9932C12.4058 13.7967 12.2716 14.029 12.36 14.4436C12.5392 15.2769 13.8756 17.7576 16.0718 19.949C18.268 22.1403 20.6771 23.3923 21.5136 23.5707C21.9459 23.6631 22.183 23.5233 23.0123 22.8901C23.1312 22.7993 23.2534 22.7052 23.3811 22.6112C24.2378 21.974 24.9144 21.5232 25.8128 21.5232H25.8176C26.5995 21.5232 27.2689 21.8623 28.3778 22.4216C29.8243 23.1512 33.1278 25.1208 34.5766 26.5825C35.2814 27.2929 35.6743 27.7461 35.8664 28.2548C36.1557 29.0206 35.8833 29.6209 35.7057 30.0227C35.6759 30.0893 35.643 30.1625 35.6084 30.2436C35.2702 31.0452 34.8589 31.814 34.3798 32.5403C33.5256 33.818 32.6601 34.8072 31.2153 35.4798C30.4733 35.8307 29.6614 36.0085 28.8407 35.9997Z" fill="#059BD8"></path>
+        </svg> </a>
       <div class="logo xl:flex xl:justify-center">
         <a class="brand" href="{{ home_url('/') }}">
           <img src="{{ $header_logo }}">
         </a>
       </div>
+      <button class="navbar-toggler bg-transparent border-0 hidden lgscreen:flex lgscreen:flex-col gap-y-[10px] lg:hidden p-0" type="button"> <span></span> <span></span> <span></span> </button>
       <div class="navbar">
         <div id="menu-main-menu" class="mobile-menu-main">
           {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'flex lgscreen:flex-col flex-wrap items-center my-0 lg:gap-6 xl:gap-8 lgscreen:gap-y-6 xl:h-full lgscreen:bg-DarkBlue lgscreen:py-32 lgscreen:px-30',
           'list_item_class' => 'nav-item',]) !!}
+          <div class="btn-custom lg:hidden lgscreen:px-30 lgscreen:pb-32 lgscreen:bg-DarkBlue">
+            <ul>
+              <li>
+                <a href="{!! $dealer_button_link['url'] !!}" class="btn btn-green">
+                  Dealer Resources
+                </a>
+              </li>
+              <li>
+                <a href="{!! $request_a_quote_button['url'] !!}" class="btn btn-green">
+                  Request A Quote
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="btn-custom lgscreen:hidden">
         <ul>
-          <li><a href="" class="btn btn-h-green">Dealer Resources</a></li>
-          <li><a href="" class="btn btn-h-green">Request A Quote</a></li>
+          <li><a href="{{ $dealer_button_link['url'] }}" class="btn btn-h-green">Dealer Resources</a></li>
+          <li><a href="{{ $request_a_quote['url'] }}" class="btn btn-h-green">Request A Quote</a></li>
         </ul>
       </div>
     </div>

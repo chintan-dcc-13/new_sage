@@ -53,6 +53,7 @@ class AcfComposer extends Composer
                         'button_label' => $content['button_label'],
                         'button_url' => $content['button_url'],
                         'background_image' => $content['background_image'],
+                        'video_background' => $content['video_background'],
                         'is_image_title' => $content['is_image_title'],
                         'title_image' => $content['title_image'],
 

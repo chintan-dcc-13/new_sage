@@ -46,7 +46,7 @@ export default async (app) => {
    * @see {@link https://developer.wordpress.org/block-editor/how-to-guides/themes/theme-json}
    */
   app.wpjson
-    .setSettings({
+    .settings({
       background: {
         backgroundImage: true,
       },

@@ -81,5 +81,31 @@ function add_code_to_head() {
     }
 }
 add_action('wp_head', 'add_code_to_head');
+add_filter('wpcf7_autop_or_not', '__return_false');
 
+remove_action('wpcf7_init', 'wpcf7_add_form_tag_submit');
+add_filter('wpcf7_init', function () {
+    wpcf7_add_form_tag('submit', function ($tag) {
+        $class = wpcf7_form_controls_class($tag->type, 'has-spinner');
+
+        $atts = array();
+
+        $atts['class'] = $tag->get_class_option($class);
+        $atts['id'] = $tag->get_id_option();
+        $atts['tabindex'] = $tag->get_option('tabindex', 'signed_int', true);
+        $atts['label'] = $tag->get_option('label', 'signed_int', true);
+
+        $value = isset($tag->values[0]) ? $tag->values[0] : '';
+
+        if (empty($value))
+            $value = __('Send');
+
+        $atts['type'] = 'submit';
+        $atts['value'] = $value;
+
+        $atts = wpcf7_format_atts($atts);
+        $html = sprintf('<button %1$s >%2$s</button>', $atts, $value);
+        return $html;
+    });
+});
 

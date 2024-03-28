@@ -41,6 +41,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @layer base {
+
   /* ===== Scrollbar CSS ===== */
   *,
   ::before,
@@ -108,7 +109,7 @@ body::-webkit-scrollbar-thumb {
   h4,
   h5,
   h6 {
-    @apply m-0 font-500;
+    @apply m-0 font-500 break-words;
   }
 
   h1.big,
@@ -122,12 +123,12 @@ body::-webkit-scrollbar-thumb {
 
   h1,
   .h1 {
-    @apply text-48 xl2:text-64 leading-[125%];
+    @apply text-[40px] xl2:text-64 leading-[125%] smscreen:whitespace-normal smscreen:break-all;
   }
 
   h2,
   .h2 {
-    @apply text-40 xl2:text-48 leading-[125%];
+    @apply text-[36px] xl2:text-48 leading-[125%];
   }
 
   h3,
@@ -160,6 +161,10 @@ body::-webkit-scrollbar-thumb {
 
   .content {
     @apply relative block w-full;
+  }
+  .content:empty,
+  .content:blank {
+    @apply hidden
   }
 
   .content p {
@@ -313,7 +318,7 @@ body::-webkit-scrollbar-thumb {
 
   .btn-blue:hover::after {
     @apply bg-Green;
-    transform: scaleX(1.4) scaleY(1.6);
+    transform: scaleX(1) scaleY(1.2);
     opacity: 0;
     filter: blur(10px);
   }
@@ -332,7 +337,7 @@ body::-webkit-scrollbar-thumb {
     @apply inline-block h-full w-full rounded-[3px] absolute top-0 left-0 -z-1 duration-300 delay-150 ease-linear;
   }
 
-  .btn-gray:hover::after {
+  .btn-gray:hover:after {
     @apply bg-Gray-200;
     transform: scaleX(1.4) scaleY(1.6);
     opacity: 0;
@@ -614,7 +619,7 @@ body::-webkit-scrollbar-thumb {
     animation: smoothdown 0s forwards;
   }
 
-  .announcement.up > .container-fluid {
+  .announcement.up>.container-fluid {
     @apply hidden;
   }
 
@@ -683,55 +688,55 @@ body::-webkit-scrollbar-thumb {
     @apply xl:flex xl:flex-wrap xl:justify-center xl:items-center xl:m-0 xl:p-0 xl:w-full xl:h-full;
   }
 
-  .navbar ul > li {
+  .navbar ul>li {
     @apply flex flex-wrap m-0 p-0 relative transition-all duration-500 ease-in-out xl:h-full xl:items-center;
   }
 
-  .navbar ul > li > a {
+  .navbar ul>li>a {
     @apply flex flex-wrap m-0 p-0 relative lg:text-16 xl:text-20 leading-[150%] xl:leading-[45px] font-Redwing font-500 text-Blue-200 capitalize duration-500 ease-in-out lgscreen:before:hidden;
   }
 
-  header.is-sticky .navbar ul > li > a {
+  header.is-sticky .navbar ul>li>a {
     @apply text-Blue-200;
   }
 
-  .navbar ul > li:hover > a,
-  header.is-sticky .navbar ul > li.current_page_parent > a,
-  header.is-sticky .navbar ul > li.current-menu-item > a,
-  header.is-sticky .navbar ul > li.active > a,
-  .navbar ul > li.current_page_parent > a,
-  .navbar ul > li.current-menu-item > a,
-  .navbar ul > li.active > a {
+  .navbar ul>li:hover>a,
+  header.is-sticky .navbar ul>li.current_page_parent>a,
+  header.is-sticky .navbar ul>li.current-menu-item>a,
+  header.is-sticky .navbar ul>li.active>a,
+  .navbar ul>li.current_page_parent>a,
+  .navbar ul>li.current-menu-item>a,
+  .navbar ul>li.active>a {
     @apply text-Blue-100;
   }
 
-  .navbar ul > li .submenu-button {
+  .navbar ul>li .submenu-button {
     @apply hidden;
   }
 
-  .navbar ul > li > ul.sub-menu {
+  .navbar ul>li>ul.sub-menu {
     @apply opacity-0 -z-100 invisible m-0 py-16 px-16 lg:flex flex-wrap items-center justify-start w-full min-w-[200px] absolute top-100_per left-50_per bg-Blue-100 translate-x-minus_50 translate-y-[20px] transition-all duration-300 delay-150 ease-linear rounded-none rounded-bl-5 rounded-br-5;
   }
 
-  .navbar ul > li:hover > ul.sub-menu {
-    @apply xl:opacity-100 xl:visible xl:z-1 xl:translate-y-[16px];
+  .navbar ul>li:hover>ul.sub-menu {
+    @apply lg:opacity-100 lg:visible lg:z-1 lg:translate-y-[26px] xl:translate-y-[16px];
   }
 
-  .navbar ul > li > ul.sub-menu {
+  .navbar ul>li>ul.sub-menu {
     @apply flex flex-col gap-4;
   }
 
-  .navbar ul > li > ul.sub-menu li {
+  .navbar ul>li>ul.sub-menu li {
     @apply p-0;
   }
 
-  .navbar ul > li > ul.sub-menu li a {
+  .navbar ul>li>ul.sub-menu li a {
     @apply p-0 font-Outfit font-400 text-16 leading-26 text-White transition-all duration-500 ease-in-out before:hidden;
   }
 
-  .navbar ul > li > ul.sub-menu li a:hover,
-  .navbar ul > li > ul.sub-menu li.current-menu-item > a,
-  .navbar ul > li > ul.sub-menu li.active > a {
+  .navbar ul>li>ul.sub-menu li a:hover,
+  .navbar ul>li>ul.sub-menu li.current-menu-item>a,
+  .navbar ul>li>ul.sub-menu li.active>a {
     @apply text-Blue-200;
   }
 
@@ -776,9 +781,16 @@ body::-webkit-scrollbar-thumb {
     @apply lg:w-full lg:h-full lg:object-cover lg:absolute lg:top-0 lg:left-0;
   }
 
+  .zigzag-img-content .zigzag-content .title h2 br {
+    @apply md:hidden;
+  }
+
   /* Zigzag image content end */
 
   /* Irrigation slider Start */
+  .irrigation-box-wrapper .title h2 br {
+    @apply md:hidden;
+  }
   .irrigation-box-wrapper .img.landscape {
     @apply relative w-full block overflow-hidden rounded-5 lg:pt-[71.11%];
   }
@@ -818,9 +830,17 @@ body::-webkit-scrollbar-thumb {
     @apply opacity-100;
   }
 
+  .irrigation-box-wrapper .details .title h4 {
+    @apply text-24;
+  }
+
   /* Irrigation slider End */
 
   /* advantages Start */
+  
+  .advantages-wrapper .title h2 br {
+    @apply md:hidden;
+  }
   .advantages-slider .swiper-scrollbar {
     @apply xxl:hidden relative inset-0 w-full h-[10px] bg-Blue-100/30 max-w-[40%] mx-auto mt-40;
   }
@@ -1097,10 +1117,7 @@ body::-webkit-scrollbar-thumb {
     @apply absolute top-0 left-0 w-full h-full bg-Black/40 duration-300 delay-150 ease-linear;
   }
 
-  .pdp-wrapper
-    .pdp-slider-thumb
-    .swiper-slide.swiper-slide-thumb-active
-    .portrait:after {
+  .pdp-wrapper .pdp-slider-thumb .swiper-slide.swiper-slide-thumb-active .portrait:after {
     @apply bg-Black/0;
   }
 
@@ -1115,6 +1132,15 @@ body::-webkit-scrollbar-thumb {
   .pdp-wrapper .cta_bc .divider {
     @apply w-full h-[1px] min-h-0 min_width_768:w-[1px] min_width_768:h-[100%] min_width_768:min-h-[30px] max_width_1400:w-full max_width_1400:h-[1px] max_width_1400:min-h-0 1400:w-[1px] 1400:h-[100%] 1400:min-h-[30px] bg-DarkBlue block;
   }
+
+  .pdp-wrapper .cat-iveco-engine,
+  .pdp-wrapper .cat-fresh-water-pumps,
+  .pdp-wrapper .cat-slurry-pumps,
+  .pdp-wrapper .cat-john-deere-engine{
+    @apply flex-row-reverse md:justify-start !justify-end mdscreen2:flex-col;
+  }
+
+
 
   /* pdp-wrapper End */
 
@@ -1289,6 +1315,12 @@ body::-webkit-scrollbar-thumb {
   .wpcf7 form .row {
     @apply flex flex-wrap items-start justify-center m-0 w-full relative gap-5;
   }
+  .subscribe .wpcf7 form .row button {
+    @apply my-0;
+  }
+  .wpcf7 form .row button {
+    @apply my-15
+  }
 
   .wpcf7 form .row .wpcf7-spinner {
     @apply hidden;
@@ -1330,6 +1362,7 @@ body::-webkit-scrollbar-thumb {
   .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(12) {
     @apply md:max-w-[calc(50%_-_10px)];
   }
+
   .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(5),
   .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(6) {
     @apply max-w-full;
@@ -1364,9 +1397,9 @@ body::-webkit-scrollbar-thumb {
     @apply text-White appearance-none;
   }
 
-  .wpcf7 form .row .input-field span select {
+  /*.wpcf7 form .row .input-field span select {
     @apply bg-[url(../images/selectarrow-down.svg)] bg-no-repeat bg-[right_20px_center] bg-[length:16px_16px];
-  }
+  }*/
 
   .wpcf7 form .row .input-field span select option {
     @apply text-Gray-200;
@@ -1374,7 +1407,7 @@ body::-webkit-scrollbar-thumb {
 
   .wpcf7 form .row .input-field label,
   .post-password-form .pass-label {
-    @apply absolute -top-[11px] left-[21px] mdscreen:left-[50%] mdscreen:translate-x-minus_50 text-Gray-200 bg-White xsscreen2:text-12 text-16 lg:text-12 xl:text-16 font-Outfit font-400 leading-20 px-8 z-1 whitespace-nowrap;
+    @apply absolute -top-[11px] left-[21px] mdscreen:left-[50%] mdscreen:translate-x-minus_50 text-Gray-200 bg-White text-12 md:text-[10px] xl:text-16 font-Outfit font-400 leading-20 px-8 z-1 whitespace-normal smscreen2:text-[10px] smscreen2:text-center smscreen:w-[90%] ;
   }
 
   .white-label .wpcf7 form .row .input-field label {
@@ -1406,46 +1439,69 @@ body::-webkit-scrollbar-thumb {
 
   /* contact form 7 End */
   /*dealer-resources start*/
-    .marketing-wrapper .list-two-column ul li {
-        @apply mb-16 last:mb-0 mdscreen2:mb-0;
-    }
+  .marketing-wrapper .list-two-column ul li {
+    @apply mb-16 last:mb-0 mdscreen2:mb-0;
+  }
 
-    .helps-wrapper .list-two-column ul li {
-        @apply mb-18 last:mb-0 mdscreen2:mb-8;
-    }
-    .Technicle-wrapper .card a.video-link{
-        @apply text-White;
-    }
+  .helps-wrapper .list-two-column ul li {
+    @apply mb-18 last:mb-0 mdscreen2:mb-8;
+  }
 
-    .Technicle-wrapper .portrait {
-        @apply relative overflow-hidden w-full block pt-[87.21%];
-    }
+  .technicle-wrapper .card a.video-link {
+    @apply text-White whitespace-normal break-words duration-300 delay-150 ease-linear hover:text-Blue-100;
+  }
 
-    .Technicle-wrapper .portrait::after {
-        @apply content-[''] absolute top-50_per left-50_per translate-x-minus_50 translate-y-minus_50 w-[48px] h-[48px] z-1 bg-center bg-no-repeat;
-        background-image: url('../images/video-icon.svg');
-        background-size: contain;
-    }
+  .technicle-wrapper .portrait {
+    @apply relative overflow-hidden w-full block pt-[87.21%];
+  }
 
-    .Technicle-wrapper .portrait img {
-        @apply absolute top-0 left-0 object-cover w-full h-full;
-    }
-    .dealer-form-wrapper .content {
-      @apply max-w-[472px] mx-auto;
-    }
+  .technicle-wrapper .portrait::after {
+    @apply content-[''] absolute top-50_per left-50_per translate-x-minus_50 translate-y-minus_50 w-[48px] h-[48px] z-1 bg-center bg-no-repeat;
+    /*background-image: url('../images/video-icon.svg');*/
+    background-size: contain;
+  }
+
+  .technicle-wrapper .portrait img {
+    @apply absolute top-0 left-0 object-cover w-full h-full;
+  }
+
+  .genral-wrapper blockquote strong {
+    @apply text-White;
+  }
+
+  .genral-wrapper .content strong {
+    @apply text-Blue-100 font-700 mb-8;
+  }
+
+  .dealer-resources-wrapper h2 {
+    @apply text-48;
+  }
+  .technicle-wrapper  h4 {
+    @apply text-24;
+  }
+
+  .dealer-resources .genral-wrapper h4 {
+    @apply text-24 m-0;
+  }
+
+
+
   /*dealer-resources end*/
 
   /* pagination Start */
   .pagination .page-numbers {
     @apply text-Gray-200 text-16 leading-[120%] m-0 p-0 font-Outfit font-400;
   }
+
   .pagination .page-numbers.current {
     @apply py-10 px-20 bg-Blue-100 text-White font-700 rounded-5;
   }
+
   .pagination .page-numbers.next,
   .pagination .page-numbers.prev {
     @apply inline-block text-center text-16 font-Outfit not-italic bg-Green text-White leading-[150%] font-500 px-[46px] py-10 relative capitalize duration-300 delay-150 ease-linear z-1 rounded-[3px]
   }
+
   .pagination .page-numbers.next:hover,
   .pagination .page-numbers.prev:hover {
     @apply translate-y-[-1px];
@@ -1465,6 +1521,7 @@ body::-webkit-scrollbar-thumb {
     opacity: 0;
     filter: blur(10px);
   }
+
   /* pagination End */
 }
 
@@ -1472,7 +1529,8 @@ body::-webkit-scrollbar-thumb {
 
 @screen lgscreen {
   .navbar {
-    @apply /*bg-Green_2*/
+    @apply
+    /*bg-Green_2*/
     w-full left-0 px-0 absolute top-[100%] duration-300 ease-linear delay-150 max-w-none;
   }
 
@@ -1497,57 +1555,45 @@ body::-webkit-scrollbar-thumb {
     @apply hidden;
   }
 
-  .navbar ul > li:hover > ul.sub-menu.open,
+  .navbar ul>li:hover>ul.sub-menu.open,
   header.header .navbar ul li ul.sub-menu.open {
     @apply flex opacity-100 visible px-30 py-16 gap-y-4 rounded-5;
   }
 
-  .navbar ul > li {
+  .navbar ul>li {
     @apply w-full;
   }
 
-  .navbar ul > li.has-sub {
+  .navbar ul>li.has-sub {
     @apply justify-between items-center mb-0 w-full gap-7;
   }
 
-  .navbar ul > li > a,
-  header.is-sticky .navbar ul > li > a {
-    @apply order-1 text-16 leading-26 text-White;
-  }
 
-  .navbar ul > li > a:hover,
-  .navbar ul > li:hover > a,
-  header.is-sticky .navbar ul > li:hover > a,
-  header.is-sticky .navbar ul > li > a:hover,
-  header.is-sticky .navbar ul li.current-menu-parent > a,
-  header.is-sticky
-    .navbar
-    ul
-    li.current-menu-item
-    > a
-    header.header
-    .navbar
-    ul
-    li.current-menu-parent
-    > a,
-  header.header .navbar ul li.current-menu-item > a {
+
+  .navbar ul>li>a:hover,
+  .navbar ul>li:hover>a,
+  header.is-sticky .navbar ul>li:hover>a,
+  header.is-sticky .navbar ul>li>a:hover,
+  header.is-sticky .navbar ul li.current-menu-parent>a,
+  header.is-sticky .navbar ul li.current-menu-item>a header.header .navbar ul li.current-menu-parent>a,
+  header.header .navbar ul li.current-menu-item>a {
     /* @apply text-Green_22; */
   }
 
-  .navbar ul > li > ul.sub-menu li.current-menu-item a,
-  .navbar ul > li > ul.sub-menu li a:hover {
+  .navbar ul>li>ul.sub-menu li.current-menu-item a,
+  .navbar ul>li>ul.sub-menu li a:hover {
     /* @apply text-Green_2; */
   }
 
-  .navbar ul > li > .submenu-button {
-    @apply order-2 block leading-0 p-0 ml-20 cursor-pointer;
+  .navbar ul>li>.submenu-button {
+    @apply order-2 !block leading-0 p-0 ml-20 cursor-pointer;
   }
 
-  .navbar ul > li > .submenu-button.submenu-opened svg {
+  .navbar ul>li>.submenu-button.submenu-opened svg {
     @apply rotate-180;
   }
 
-  .navbar ul > li:first-child > ul.sub-menu li:first-child {
+  .navbar ul>li:first-child>ul.sub-menu li:first-child {
     @apply ml-0;
   }
 
@@ -1577,6 +1623,10 @@ body::-webkit-scrollbar-thumb {
 
   .header-bottom .btn-custom ul li .btn-green {
     @apply bg-Green text-White leading-[150%] font-500 px-[46px] py-10 relative capitalize duration-300 delay-150 ease-linear z-1 smscreen:min-w-[200px] justify-center;
+  }
+    .navbar ul>li>a,
+  header.is-sticky .navbar ul>li>a {
+    @apply order-1 text-16 leading-26 !text-White;
   }
 }
 

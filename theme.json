@@ -16,59 +16,59 @@
       "duotone": [],
       "palette": [
         {
-          "color": "transparent",
           "name": "Transparent",
-          "slug": "transparent"
+          "slug": "transparent",
+          "color": "transparent"
         },
         {
-          "color": "#ffffff",
           "name": "White",
-          "slug": "white"
+          "slug": "white",
+          "color": "#ffffff"
         },
         {
-          "color": "#000000",
           "name": "Black",
-          "slug": "black"
+          "slug": "black",
+          "color": "#000000"
         },
         {
-          "color": "#004b80",
           "name": "DarkBlue",
-          "slug": "darkblue"
+          "slug": "darkblue",
+          "color": "#004b80"
         },
         {
-          "color": "#059bd8",
           "name": "Blue 100",
-          "slug": "blue-100"
+          "slug": "blue-100",
+          "color": "#059bd8"
         },
         {
-          "color": "#004b80",
           "name": "Blue 200",
-          "slug": "blue-200"
+          "slug": "blue-200",
+          "color": "#004b80"
         },
         {
-          "color": "#08435b",
           "name": "Blue 300",
-          "slug": "blue-300"
+          "slug": "blue-300",
+          "color": "#08435b"
         },
         {
-          "color": "#15a02b",
           "name": "Green",
-          "slug": "green"
+          "slug": "green",
+          "color": "#15a02b"
         },
         {
-          "color": "#fafafa",
           "name": "Gray 100",
-          "slug": "gray-100"
+          "slug": "gray-100",
+          "color": "#fafafa"
         },
         {
-          "color": "#455a64",
           "name": "Gray 200",
-          "slug": "gray-200"
+          "slug": "gray-200",
+          "color": "#455a64"
         },
         {
-          "color": "#137894",
           "name": "Aquamarine",
-          "slug": "aquamarine"
+          "slug": "aquamarine",
+          "color": "#137894"
         }
       ]
     },
@@ -94,106 +94,106 @@
       "customFontSize": false,
       "fontFamilies": [
         {
-          "fontFamily": "Outfit",
           "name": "Outfit",
-          "slug": "Outfit"
+          "slug": "Outfit",
+          "fontFamily": "Outfit"
         },
         {
-          "fontFamily": "Redwing",
           "name": "Redwing",
-          "slug": "Redwing"
+          "slug": "Redwing",
+          "fontFamily": "Redwing"
         }
       ],
       "fontSizes": [
         {
           "name": "12",
-          "size": "12px",
-          "slug": "12"
+          "slug": "12",
+          "size": "12px"
         },
         {
           "name": "13",
-          "size": "13px",
-          "slug": "13"
+          "slug": "13",
+          "size": "13px"
         },
         {
           "name": "14",
-          "size": "14px",
-          "slug": "14"
+          "slug": "14",
+          "size": "14px"
         },
         {
           "name": "16",
-          "size": "16px",
-          "slug": "16"
+          "slug": "16",
+          "size": "16px"
         },
         {
           "name": "17",
-          "size": "17px",
-          "slug": "17"
+          "slug": "17",
+          "size": "17px"
         },
         {
           "name": "18",
-          "size": "18px",
-          "slug": "18"
+          "slug": "18",
+          "size": "18px"
         },
         {
           "name": "20",
-          "size": "20px",
-          "slug": "20"
+          "slug": "20",
+          "size": "20px"
         },
         {
           "name": "22",
-          "size": "22px",
-          "slug": "22"
+          "slug": "22",
+          "size": "22px"
         },
         {
           "name": "24",
-          "size": "24px",
-          "slug": "24"
+          "slug": "24",
+          "size": "24px"
         },
         {
           "name": "26",
-          "size": "26px",
-          "slug": "26"
+          "slug": "26",
+          "size": "26px"
         },
         {
           "name": "28",
-          "size": "28px",
-          "slug": "28"
+          "slug": "28",
+          "size": "28px"
         },
         {
           "name": "30",
-          "size": "30px",
-          "slug": "30"
+          "slug": "30",
+          "size": "30px"
         },
         {
           "name": "32",
-          "size": "32px",
-          "slug": "32"
+          "slug": "32",
+          "size": "32px"
         },
         {
           "name": "34",
-          "size": "34px",
-          "slug": "34"
+          "slug": "34",
+          "size": "34px"
         },
         {
           "name": "40",
-          "size": "40px",
-          "slug": "40"
+          "slug": "40",
+          "size": "40px"
         },
         {
           "name": "48",
-          "size": "48px",
-          "slug": "48"
+          "slug": "48",
+          "size": "48px"
         },
         {
           "name": "56",
-          "size": "56px",
-          "slug": "56"
+          "slug": "56",
+          "size": "56px"
         },
         {
           "name": "64",
-          "size": "64px",
-          "slug": "64"
+          "slug": "64",
+          "size": "64px"
         }
       ]
     }
