@@ -14,6 +14,7 @@ class HeaderComposer extends Composer
     protected static $views = [
         'sections.header',
         'sections.footer',
+        '404',
     ];
     public function with(){
         return[
@@ -36,6 +37,10 @@ class HeaderComposer extends Composer
             'form_shortcode' => get_field('form_shortcode', 'option'),
             'social_media_item' => get_field('social_media_item', 'option'),
             'copy_right' => get_field('copy_right', 'option'),
+            
+            //404
+            'page_404_image' => get_field('page_404_image', 'option'),
+            
         ];
     }
 }

@@ -1,4 +1,4 @@
-<header class="header header-transperent">
+<header class="header {!! is_front_page() ? 'header-transperent' : '' !!}">
   <div class="announcement">
     <div class="container-fluid">
       <div class="relative flex flex-wrap items-center lg:justify-between justify-center py-16 md:py-12 w-full">

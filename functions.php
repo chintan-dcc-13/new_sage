@@ -69,6 +69,7 @@ collect(['setup', 'filters'])
 function add_code_to_head() {
     $post_id = get_the_ID();
     $href_lang = get_field('hreflang_tags', $post_id);
+    if($href_lang){
     foreach($href_lang as $content){
         ?>
         <link rel="alternate" href="<?php echo $content['alternative_url'] ?>" hreflang="<?php if( $content['language'] != 'x-default' ){
@@ -79,6 +80,7 @@ function add_code_to_head() {
         }?>">
         <?php
     }
+}
 }
 add_action('wp_head', 'add_code_to_head');
 add_filter('wpcf7_autop_or_not', '__return_false');
