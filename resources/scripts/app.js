@@ -375,6 +375,24 @@ domReady(async () => {
           },
         },
       });
+      var swiper = new Swiper('.pdp-slider-thumb', {
+        spaceBetween: 30,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper('.pdp-slider', {
+        spaceBetween: 1,
+        slidesPerView: 1,
+        speed: 2000,
+        // autoplay: {
+        //   delay: 3000,
+        //   disableOnInteraction: false,
+        // },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
   });
 });
 
