@@ -87,6 +87,5 @@
                 </table>
             </div>
         @endforeach
-
     </div>
 </section>
