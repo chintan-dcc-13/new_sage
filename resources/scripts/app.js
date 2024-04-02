@@ -393,6 +393,40 @@ domReady(async () => {
           swiper: swiper,
         },
       });
+      var galleryslide = new Swiper('.brochure-slider', {
+        loop: true,
+        slidesPerView: 1,
+        spaceBetween: 40,
+        centeredSlides: false,
+        speed: 2000,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        breakpoints: {
+          320: {
+            slidesPerView: 1.5,
+            spaceBetween: 20,
+            centeredSlides: true,
+            loop: true,
+          },
+          640: {
+            slidesPerView: 1.5,
+            spaceBetween: 22,
+            centeredSlides: true,
+            loop: true,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 45,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 90,
+            centeredSlides: true,
+          },
+        },
+      });
   });
 });
 
