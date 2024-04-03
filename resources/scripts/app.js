@@ -194,10 +194,10 @@ domReady(async () => {
       });
     }
     $(window)
-        .resize(function () {
-          $('.banner-details').css('padding-top', $('.header').height());
-        })
-        .resize();
+      .resize(function () {
+        $('.banner-details').css('padding-top', $('.header').height());
+      })
+      .resize();
     if ($('.advantages').length) {
       var advantagesslide;
       function initSwiper() {
@@ -345,88 +345,156 @@ domReady(async () => {
         },
       });
     }
-      var galleryslide = new Swiper('.announcement-bar', {
-        loop: true,
-        slidesPerView: '1',
-        spaceBetween: 0,
-        centeredSlides: false,
-        speed: 3000,
-        freeMode: true,
-        autoplay: {
-          delay: 0,
+    var galleryslide = new Swiper('.announcement-bar', {
+      loop: true,
+      slidesPerView: '1',
+      spaceBetween: 0,
+      centeredSlides: false,
+      speed: 3000,
+      freeMode: true,
+      autoplay: {
+        delay: 0,
+      },
+      disableOnInteraction: false,
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 40,
         },
+        640: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 1,
+          spaceBetween: 40,
+        },
+      },
+    });
+    var swiper = new Swiper('.pdp-slider-thumb', {
+      spaceBetween: 30,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper('.pdp-slider', {
+      spaceBetween: 1,
+      slidesPerView: 1,
+      speed: 2000,
+      // autoplay: {
+      //   delay: 3000,
+      //   disableOnInteraction: false,
+      // },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+    var galleryslide = new Swiper('.brochure-slider', {
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 40,
+      centeredSlides: false,
+      speed: 2000,
+      autoplay: {
+        delay: 2500,
         disableOnInteraction: false,
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 40,
-          },
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 40,
-          },
-          768: {
-            slidesPerView: 1,
-            spaceBetween: 40,
-          },
-          1024: {
-            slidesPerView: 1,
-            spaceBetween: 40,
-          },
+      },
+      breakpoints: {
+        320: {
+          slidesPerView: 1.5,
+          spaceBetween: 20,
+          centeredSlides: true,
+          loop: true,
         },
-      });
-      var swiper = new Swiper('.pdp-slider-thumb', {
-        spaceBetween: 30,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-      });
-      var swiper2 = new Swiper('.pdp-slider', {
-        spaceBetween: 1,
-        slidesPerView: 1,
-        speed: 2000,
-        // autoplay: {
-        //   delay: 3000,
-        //   disableOnInteraction: false,
-        // },
-        thumbs: {
-          swiper: swiper,
+        640: {
+          slidesPerView: 1.5,
+          spaceBetween: 22,
+          centeredSlides: true,
+          loop: true,
         },
-      });
-      var galleryslide = new Swiper('.brochure-slider', {
-        loop: true,
-        slidesPerView: 1,
-        spaceBetween: 40,
-        centeredSlides: false,
-        speed: 2000,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 45,
         },
-        breakpoints: {
-          320: {
-            slidesPerView: 1.5,
-            spaceBetween: 20,
-            centeredSlides: true,
-            loop: true,
-          },
-          640: {
-            slidesPerView: 1.5,
-            spaceBetween: 22,
-            centeredSlides: true,
-            loop: true,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 45,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 90,
-            centeredSlides: true,
-          },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 90,
+          centeredSlides: true,
         },
+      },
+    });
+    // Load More
+    if ($('.collection-wrapper').length) {
+      $('.collection-wrapper').each(function () {
+        var $section = $(this);
+        var $products = $section.find('.product_item');
+
+        $products.hide().slice(0, 9).show();
+
+        if ($products.length > 9) {
+          $section.find('.product-loadmore').show();
+        } else {
+          $section.find('.product-loadmore').hide();
+        }
+
+        $section.find('.product-loadmore .btn-custom').on('click', function () {
+          $products.filter(':hidden').slice(0, 3).fadeIn();
+          if ($products.filter(':hidden').length === 0) {
+            $(this).fadeOut();
+          }
+        });
       });
+    }
+    if ($('.product-wrapper').length) {
+      var productslide;
+      function initSwiper() {
+        if (productslide) {
+          productslide.destroy();
+        }
+        productslide = new Swiper('.product-slider', {
+          grabCursor: true,
+          scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: false,
+            draggable: true,
+          },
+          breakpoints: {
+            1200: {
+              slidesPerView: 5,
+              spaceBetween: 40,
+              scrollbar: false,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+              centeredSlides: true,
+            },
+            640: {
+              slidesPerView: 1.5,
+              spaceBetween: 20,
+              centeredSlides: true,
+            },
+            320: {
+              slidesPerView: 1.5,
+              spaceBetween: 20,
+              centeredSlides: true,
+            },
+          },
+        });
+      }
+      initSwiper();
+      window.addEventListener('resize', function () {
+        initSwiper();
+      });
+    }
   });
 });
 

@@ -18,10 +18,12 @@
                                 <div class="content text-left">
                                     {!! $content['content'] !!}
                                 </div>
+                                @if($content['button_label'])
                                 <div class="btn-custom text-left mt-24">
                                     <a href="{{ $content['button_url'] }}"
                                         class="btn btn-green">{{ $content['button_label'] }}</a>
                                 </div>
+                                @endif
                             </div>
                         </div>
                         <div

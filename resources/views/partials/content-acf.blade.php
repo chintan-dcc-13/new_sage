@@ -23,3 +23,25 @@
         @endswitch
     @endforeach
 @endif
+
+@if ($tsContentData)
+    @foreach ($tsContentData as $content)
+        @switch($content->layout)
+            @case('product_listing')
+                @include('partials.sections.product_listing')
+            @break
+            @case('breadcrumb')
+                @include('partials.sections.breadcrumb')
+            @break
+            @case('product_support_grid')
+                @include('partials.sections.product_support_grid')
+            @break
+            @case('product_support_form')
+                @include('partials.sections.product_support_form')
+            @break
+            @case('cta')
+                @include('partials.sections.cta')
+            @break
+        @endswitch
+    @endforeach
+@endif
