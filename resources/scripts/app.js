@@ -495,6 +495,81 @@ domReady(async () => {
         initSwiper();
       });
     }
+    var partnersslide;
+      function initSwiper() {
+        if (partnersslide) {
+          partnersslide.destroy();
+        }
+        partnersslide = new Swiper('.partners-slider', {
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          grabCursor: true,
+          breakpoints: {
+            1366: {
+              slidesPerView: 4,
+              spaceBetween: 40,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 40,
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 40,
+              centeredSlides: false,
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+            },
+            640: {
+              slidesPerView: 1.5,
+              spaceBetween: 40,
+              centeredSlides: true,
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+            },
+            376: {
+              slidesPerView: 1.2,
+              spaceBetween: 20,
+              centeredSlides: true,
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+            },
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 15,
+              centeredSlides: true,
+              autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+              },
+            },
+          },
+        });
+      }
+      initSwiper();
+      window.addEventListener('resize', function () {
+        initSwiper();
+      });
+      $('.toggle-content').hide();
+    $('.toggle-icon, .toggle-title').click(function (event) {
+      event.stopPropagation();
+      var $toggleItem = $(this).closest('.toggle-item');
+      $toggleItem.find('.toggle-content').slideToggle();
+      $toggleItem.find('.toggle-icon').toggleClass('active');
+      $toggleItem.find('.toggle-icon img').toggleClass('caret-right');
+    });
   });
 });
 

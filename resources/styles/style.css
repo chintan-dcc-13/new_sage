@@ -588,6 +588,8 @@ body::-webkit-scrollbar-thumb {
     @apply overflow-hidden;
   }
 
+
+
   /* Header Start */
   @keyframes smoothScroll {
     0% {
@@ -1311,133 +1313,9 @@ body::-webkit-scrollbar-thumb {
 
   /* brochure-wrapper End */
 
-  /* contact form 7 Start */
-  .wpcf7 form .row {
-    @apply flex flex-wrap items-start justify-center m-0 w-full relative gap-5;
-  }
-  .subscribe .wpcf7 form .row button {
-    @apply my-0;
-  }
-  .wpcf7 form .row button {
-    @apply my-15
-  }
+  
 
-  .wpcf7 form .row .wpcf7-spinner {
-    @apply hidden;
-  }
 
-  .wpcf7 form .row .input-field {
-    @apply relative w-full;
-  }
-
-  .wpcf7 form .row .input-field:nth-child(1),
-  .wpcf7 form .row .input-field:nth-child(2),
-  .wpcf7 form .row .input-field:nth-child(3),
-  .wpcf7 form .row .input-field:nth-child(4),
-  .wpcf7 form .row .input-field:nth-child(6),
-  .wpcf7 form .row .input-field:nth-child(7) {
-    @apply md:max-w-[calc(50%_-_10px)];
-  }
-
-  .wpcf7 form.request-a-quote-cf7 .row .input-field:nth-child(1),
-  .wpcf7 form.request-a-quote-cf7 .row .input-field:nth-child(2),
-  .wpcf7 form.request-a-quote-cf7 .row .input-field:nth-child(3),
-  .wpcf7 form.request-a-quote-cf7 .row .input-field:nth-child(4),
-  .wpcf7 form.request-a-quote-cf7 .row .input-field:nth-child(5),
-  .wpcf7 form.request-a-quote-cf7 .row .input-field:nth-child(6),
-  .wpcf7 form.request-a-quote-cf7 .row .input-field:nth-child(7),
-  .wpcf7 form.request-a-quote-cf7 .row .input-field:nth-child(8) {
-    @apply md:max-w-[calc(50%_-_10px)];
-  }
-
-  .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(1),
-  .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(2),
-  .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(3),
-  .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(4),
-  .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(7),
-  .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(8),
-  .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(9),
-  .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(10),
-  .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(11),
-  .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(12) {
-    @apply md:max-w-[calc(50%_-_10px)];
-  }
-
-  .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(5),
-  .wpcf7 form.become-a-dealer-cf7 .row .input-field:nth-child(6) {
-    @apply max-w-full;
-  }
-
-  .wpcf7 form .row .input-field.input-full {
-    @apply md:max-w-[100%];
-  }
-
-  .become-form form.post-password-form {
-    @apply flex flex-col items-center justify-center m-0 mx-auto p-0 w-full max-w-[472px] relative gap-4;
-  }
-
-  .wpcf7 form .row .input-field span input,
-  .wpcf7 form .row .input-field span textarea,
-  .wpcf7 form .row .input-field span select,
-  .post-password-form input {
-    @apply bg-transparent border-1 border-solid border-Blue-100 p-0 py-[11px] px-[29px] m-0 text-Gray-200 text-16 leading-20 font-Outfit font-400 outline-none rounded-[3px] w-full;
-  }
-
-  .wpcf7 form .row .input-field span textarea {
-    @apply h-[100px];
-  }
-
-  .wpcf7 form .row .btn {
-    @apply mdscreen:w-full;
-  }
-
-  .white-label .wpcf7 form .row .input-field span input,
-  .white-label .wpcf7 form .row .input-field span textarea,
-  .wpcf7 form .row .input-field span select {
-    @apply text-White appearance-none;
-  }
-
-  /*.wpcf7 form .row .input-field span select {
-    @apply bg-[url(../images/selectarrow-down.svg)] bg-no-repeat bg-[right_20px_center] bg-[length:16px_16px];
-  }*/
-
-  .wpcf7 form .row .input-field span select option {
-    @apply text-Gray-200;
-  }
-
-  .wpcf7 form .row .input-field label,
-  .post-password-form .pass-label {
-    @apply absolute -top-[11px] left-[21px] mdscreen:left-[50%] mdscreen:translate-x-minus_50 text-Gray-200 bg-White text-12 md:text-[10px] xl:text-16 font-Outfit font-400 leading-20 px-8 z-1 whitespace-normal smscreen2:text-[10px] smscreen2:text-center smscreen:w-[90%] ;
-  }
-
-  .white-label .wpcf7 form .row .input-field label {
-    @apply absolute -top-[11px] left-[21px] mdscreen:left-[50%] mdscreen:translate-x-minus_50 text-White/50 text-opacity-50 bg-Blue-300 xsscreen2:text-12 text-16 lg:text-12 xl:text-16 font-Outfit font-400 leading-20 px-8 z-1 whitespace-nowrap;
-  }
-
-  .request-form-wrapper .wpcf7 form .row .input-field:last-of-type,
-  .applyform-box .wpcf7 form .row .input-field:last-of-type {
-    @apply bg-transparent border-1 border-solid border-Blue-100 p-0 py-[11px] px-20 m-0 text-Gray-200 text-16 leading-20 font-Outfit font-400 outline-none rounded-[3px] w-full;
-  }
-
-  .request-form-wrapper .wpcf7 form .row .input-field:last-of-type span,
-  .applyform-box .wpcf7 form .row .input-field:last-of-type span {
-    @apply block text-center my-15;
-  }
-
-  .request-form-wrapper .wpcf7 form .row .input-field:last-of-type span input,
-  .applyform-box .wpcf7 form .row .input-field:last-of-type span input {
-    @apply w-auto p-0 border-none max-w-[210px];
-  }
-
-  .wpcf7 .wpcf7-response-output {
-    @apply mx-0;
-  }
-
-  .white-label .wpcf7 .wpcf7-response-output {
-    @apply text-White;
-  }
-
-  /* contact form 7 End */
   /*dealer-resources start*/
   .marketing-wrapper .list-two-column ul li {
     @apply mb-16 last:mb-0 mdscreen2:mb-0;

@@ -20,13 +20,6 @@
             @case('image_slider')
                 @include('partials.sections.image-slider')
             @break
-        @endswitch
-    @endforeach
-@endif
-
-@if ($tsContentData)
-    @foreach ($tsContentData as $content)
-        @switch($content->layout)
             @case('product_listing')
                 @include('partials.sections.product_listing')
             @break
@@ -42,6 +35,16 @@
             @case('cta')
                 @include('partials.sections.cta')
             @break
+            @case('general_content')
+                @include('partials.sections.general_content')
+            @break
+            @case('partner_grid')
+                @include('partials.sections.partner_grid')
+            @break
+            @case('sales_team')
+                @include('partials.sections.sales_team')
+            @break
         @endswitch
     @endforeach
 @endif
+
