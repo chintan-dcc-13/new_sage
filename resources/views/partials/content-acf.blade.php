@@ -44,6 +44,9 @@
             @case('sales_team')
                 @include('partials.sections.sales_team')
             @break
+            @case('blogs_listing')
+                @include('partials.sections.blogs_listing')
+            @break
         @endswitch
     @endforeach
 @endif

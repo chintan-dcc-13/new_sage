@@ -44,7 +44,7 @@ class AcfComposer extends Composer
         $flexibleContent = get_field('acf_flex_content');
         if ($flexibleContent) {
             foreach ($flexibleContent as $content) {
-                
+
                 if ($content['acf_fc_layout'] == 'home_page_banner') {
                     $this_content = (object)[
                         'layout' => $content['acf_fc_layout'],
@@ -59,14 +59,13 @@ class AcfComposer extends Composer
 
                     ];
                     array_push($data, $this_content);
-                }elseif($content['acf_fc_layout'] == 'image_content_loop'){
+                } elseif ($content['acf_fc_layout'] == 'image_content_loop') {
                     $this_content = (object)[
                         'layout' => $content['acf_fc_layout'],
                         'content_loop' => $content['content_loop']
                     ];
                     array_push($data, $this_content);
-                }
-                elseif($content['acf_fc_layout'] == 'image_card_grid'){
+                } elseif ($content['acf_fc_layout'] == 'image_card_grid') {
                     $this_content = (object)[
                         'layout' => $content['acf_fc_layout'],
                         'title' => $content['title'],
@@ -76,8 +75,7 @@ class AcfComposer extends Composer
 
                     ];
                     array_push($data, $this_content);
-                }
-                elseif($content['acf_fc_layout'] == 'advantages'){
+                } elseif ($content['acf_fc_layout'] == 'advantages') {
                     $this_content = (object)[
                         'layout' => $content['acf_fc_layout'],
                         'title' => $content['title'],
@@ -87,15 +85,13 @@ class AcfComposer extends Composer
 
                     ];
                     array_push($data, $this_content);
-                }
-                elseif($content['acf_fc_layout'] == 'image_slider'){
+                } elseif ($content['acf_fc_layout'] == 'image_slider') {
                     $this_content = (object)[
                         'layout' => $content['acf_fc_layout'],
                         'slider_images' => $content['slider_images']
                     ];
                     array_push($data, $this_content);
-                }
-                elseif ($content['acf_fc_layout'] == 'product_listing') {
+                } elseif ($content['acf_fc_layout'] == 'product_listing') {
                     $select_cat = $content['select_product_category'];
                     $products = array();
                     $products_args = array(
@@ -137,65 +133,104 @@ class AcfComposer extends Composer
                         'select_product_category' => $content['select_product_category'],
                     ];
                     array_push($data, $this_content);
-                }
-                elseif($content['acf_fc_layout'] == 'breadcrumb'){
+                } elseif ($content['acf_fc_layout'] == 'breadcrumb') {
                     $this_content = (object)[
-                            'layout' => $content['acf_fc_layout'],
-                            'bg_image' => $content['bg_image'],
-                            'pre_heading' => $content['pre_heading'],
-                            'heading' => $content['heading'],
+                        'layout' => $content['acf_fc_layout'],
+                        'bg_image' => $content['bg_image'],
+                        'pre_heading' => $content['pre_heading'],
+                        'heading' => $content['heading'],
                     ];
                     array_push($data, $this_content);
-                }
-                elseif($content['acf_fc_layout'] == 'product_support_grid'){
+                } elseif ($content['acf_fc_layout'] == 'product_support_grid') {
                     $this_content = (object)[
-                            'layout' => $content['acf_fc_layout'],
-                            'heading' => $content['heading'],
-                            'support_grid' => $content['support_grid'],
+                        'layout' => $content['acf_fc_layout'],
+                        'heading' => $content['heading'],
+                        'support_grid' => $content['support_grid'],
                     ];
                     array_push($data, $this_content);
-                }
-                elseif($content['acf_fc_layout'] == 'product_support_form'){
+                } elseif ($content['acf_fc_layout'] == 'product_support_form') {
                     $this_content = (object)[
-                            'layout' => $content['acf_fc_layout'],
-                            'background_color' => $content['background_color'],
-                            'support_form' => $content['support_form'],
-                            'heading' => $content['heading'],
-                            'description' => $content['description'],
+                        'layout' => $content['acf_fc_layout'],
+                        'background_color' => $content['background_color'],
+                        'support_form' => $content['support_form'],
+                        'heading' => $content['heading'],
+                        'description' => $content['description'],
                     ];
                     array_push($data, $this_content);
-                }
-                elseif($content['acf_fc_layout'] == 'cta'){
+                } elseif ($content['acf_fc_layout'] == 'cta') {
                     $this_content = (object)[
-                            'layout' => $content['acf_fc_layout'],
-                            'heading' => $content['heading'],
-                            'button' => $content['button'],
-                            'content' => $content['content'],
+                        'layout' => $content['acf_fc_layout'],
+                        'heading' => $content['heading'],
+                        'button' => $content['button'],
+                        'content' => $content['content'],
                     ];
                     array_push($data, $this_content);
-                }
-                elseif($content['acf_fc_layout'] == 'general_content'){
+                } elseif ($content['acf_fc_layout'] == 'general_content') {
                     $this_content = (object)[
-                            'layout' => $content['acf_fc_layout'],
-                            'heading' => $content['heading'],
-                            'content' => $content['content'],
+                        'layout' => $content['acf_fc_layout'],
+                        'heading' => $content['heading'],
+                        'content' => $content['content'],
                     ];
                     array_push($data, $this_content);
-                }
-                elseif($content['acf_fc_layout'] == 'partner_grid'){
+                } elseif ($content['acf_fc_layout'] == 'partner_grid') {
                     $this_content = (object)[
-                            'layout' => $content['acf_fc_layout'],
-                            'heading' => $content['heading'],
-                            'description' => $content['description'],
-                            'partner_grid' => $content['partner_grid'],
+                        'layout' => $content['acf_fc_layout'],
+                        'heading' => $content['heading'],
+                        'description' => $content['description'],
+                        'partner_grid' => $content['partner_grid'],
                     ];
                     array_push($data, $this_content);
-                }
-                elseif($content['acf_fc_layout'] == 'sales_team'){
+                } elseif ($content['acf_fc_layout'] == 'sales_team') {
                     $this_content = (object)[
-                            'layout' => $content['acf_fc_layout'],
-                            'heading' => $content['heading'],
-                            'team_member' => $content['team_member'],
+                        'layout' => $content['acf_fc_layout'],
+                        'heading' => $content['heading'],
+                        'team_member' => $content['team_member'],
+                    ];
+                    array_push($data, $this_content);
+                } elseif ($content['acf_fc_layout'] == 'blogs_listing') {
+                    $blogs = array();
+                    $blogs_args = array(
+                        'post_type' => 'post',
+                        'post_status' => 'publish',
+                    );
+                    $blogs_query = new \WP_Query($blogs_args);
+                    $has_post = $blogs_query->max_num_pages > 1;
+                    if ($blogs_query->have_posts()) {
+                        while ($blogs_query->have_posts()) : $blogs_query->the_post();
+                            $fea_img = get_the_post_thumbnail_url() ? get_the_post_thumbnail_url() :  \Roots\asset('images/default.jpg')->uri();
+                            $image_id = get_post_thumbnail_id();
+                            $img_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
+                            $img_alt = $img_alt ? $img_alt : get_the_title($image_id);
+                            $blogs[] = array(
+                                'title' => get_the_title(),
+                                'url' => get_the_permalink(),
+                                'img' => $fea_img,
+                                'img_alt' => $img_alt,
+                                'author' => get_the_author(),
+                                'date' => get_the_date('m/d/Y'),
+                                'category' => array_map(function ($item) {
+                                    return [
+                                        'id' => $item->term_id,
+                                        'name' => $item->name,
+                                        'slug' => $item->slug,
+                                    ];
+                                }, get_the_category()),
+                                'excerpt_desc' => get_the_excerpt(),
+                            );
+                        endwhile;
+                        wp_reset_postdata();
+                    }
+                    $this_content = (object)[
+                        'layout' => $content['acf_fc_layout'],
+                        'blogs' => $blogs,
+                        'has_post' => $has_post,
+                        'categories' => array_map(function ($item) {
+                            return [
+                                'id' => $item->term_id,
+                                'name' => $item->name,
+                                'slug' => $item->slug,
+                            ];
+                        }, get_categories()),
                     ];
                     array_push($data, $this_content);
                 }
